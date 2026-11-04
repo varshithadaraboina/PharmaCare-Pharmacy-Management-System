@@ -1,0 +1,259 @@
+
+.welcome-page {
+  min-height: 100vh;
+  background: #f7faff;
+  color: #23334d;
+  font-family: Arial, sans-serif;
+  padding: 0 6%;
+}
+
+.welcome-nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7edf5;
+}
+
+.welcome-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.welcome-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #e5f0ff;
+  color: #3275d9;
+  display: grid;
+  place-items: center;
+}
+
+.welcome-brand h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.welcome-brand span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #8391a5;
+}
+
+.nav-login {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  background: #3275d9;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.welcome-hero {
+  min-height: 490px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e5f0ff;
+  color: #3275d9;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero-content h1 {
+  font-size: clamp(38px, 5vw, 59px);
+  line-height: 1.15;
+  margin: 25px 0;
+  color: #20314c;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: #3275d9;
+}
+
+.hero-content p {
+  max-width: 520px;
+  color: #718096;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.get-started-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #3275d9;
+  color: white;
+  border: none;
+  padding: 16px 25px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: 0.2s;
+}
+
+.get-started-btn:hover,
+.nav-login:hover {
+  background: #205bb4;
+}
+
+.welcome-trust {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #4c9c73;
+  margin-top: 25px;
+  font-size: 13px;
+}
+
+.hero-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dcecff, #edf7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.medicine-box {
+  width: 175px;
+  height: 215px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px #8eafd544;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3275d9;
+}
+
+.medicine-cross {
+  width: 65px;
+  height: 65px;
+  border-radius: 15px;
+  background: #e5f0ff;
+  font-size: 55px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.medicine-box h2 {
+  margin: 18px 0 0;
+  font-size: 23px;
+}
+
+.medicine-box span {
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+
+.floating-icon {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 25px #8eafd544;
+  display: grid;
+  place-items: center;
+  color: #3275d9;
+}
+
+.icon-one {
+  top: 25px;
+  right: 35px;
+}
+
+.icon-two {
+  bottom: 35px;
+  right: 5px;
+  color: #37a879;
+}
+
+.icon-three {
+  bottom: 35px;
+  left: 5px;
+  color: #ed9d42;
+}
+
+.welcome-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 25px 0;
+}
+
+.feature-box {
+  background: white;
+  border: 1px solid #e8eef6;
+  padding: 23px;
+  border-radius: 13px;
+  box-shadow: 0 5px 20px #23334d08;
+}
+
+.feature-box svg {
+  color: #3275d9;
+}
+
+.feature-box h3 {
+  font-size: 16px;
+}
+
+.feature-box p {
+  color: #8290a4;
+  font-size: 13px;
+}
+
+.welcome-footer {
+  text-align: center;
+  padding: 25px 0;
+  color: #8995a6;
+  font-size: 12px;
+}
+
+@media (max-width: 750px) {
+  .welcome-hero {
+    grid-template-columns: 1fr;
+    padding: 45px 0;
+  }
+
+  .hero-illustration {
+    padding: 20px 0;
+  }
+
+  .illustration-circle {
+    width: 270px;
+    height: 270px;
+  }
+
+  .welcome-features {
+    grid-template-columns: 1fr;
+  }
+}
