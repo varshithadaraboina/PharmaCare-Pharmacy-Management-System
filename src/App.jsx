@@ -21,7 +21,20 @@ const SAMPLE_MEDICINES = [
   { name: "Metformin 500mg", category: "Other", stock: 60, price: 28, expiry: "2027-07-14" },
   { name: "Pantoprazole 40mg", category: "Gastric", stock: 45, price: 40, expiry: "2027-12-10" },
   { name: "Montelukast 10mg", category: "Allergy", stock: 38, price: 55, expiry: "2027-09-22" },
-  { name: "Calcium + Vitamin D", category: "Supplements", stock: 70, price: 90, expiry: "2028-02-15" }
+  { name: "Calcium + Vitamin D", category: "Supplements", stock: 70, price: 90, expiry: "2028-02-15" },
+  { name: "Aspirin 75mg", category: "Pain Relief", stock: 50, price: 15, expiry: "2028-06-15" },
+  { name: "Dolo 650mg", category: "Pain Relief", stock: 70, price: 30, expiry: "2028-08-20" },
+  { name: "Cough Syrup", category: "Cough & Cold", stock: 35, price: 85, expiry: "2027-12-10" },
+  { name: "Vitamin B Complex", category: "Supplements", stock: 45, price: 40, expiry: "2028-03-12" },
+  { name: "Iron Tablets", category: "Supplements", stock: 55, price: 65, expiry: "2028-05-18" },
+  { name: "Antacid Tablets", category: "Gastric", stock: 40, price: 25, expiry: "2027-11-25" },
+  { name: "Loratadine 10mg", category: "Allergy", stock: 30, price: 20, expiry: "2028-01-30" },
+  { name: "Clotrimazole Cream", category: "Skin Care", stock: 25, price: 50, expiry: "2027-10-15" },
+  { name: "Antiseptic Liquid", category: "First Aid", stock: 20, price: 75, expiry: "2028-04-22" },
+  { name: "ORS Powder", category: "Other", stock: 60, price: 20, expiry: "2027-09-18" },
+  { name: "Zinc Tablets", category: "Supplements", stock: 45, price: 35, expiry: "2028-07-14" },
+  { name: "Eye Drops", category: "Eye Care", stock: 25, price: 55, expiry: "2027-12-20" },
+  { name: "Bandage Roll", category: "First Aid", stock: 40, price: 30, expiry: "2029-01-10" }
 ];
 
 const money = value =>
@@ -806,10 +819,10 @@ async function loadData() {
             }
           />
 
-          {renderMedicineTable(false, 5)}
+          {renderMedicineTable(false, 25)}
 
           <div className="table-footer">
-            Showing {Math.min(5, medicines.length)} of {medicines.length} medicines
+            Showing {Math.min(25, medicines.length)} of {medicines.length} medicines
             <button onClick={() => setPage("Medicines")}>View All ↗</button>
           </div>
         </section>
