@@ -1531,3 +1531,17 @@ button:active:not(:disabled) {
 button:disabled {
   cursor: not-allowed;
 }
+
+/* Fix: Search medicine text visibility */
+.page-search input {
+  color: #222 !important;
+  background-color: #fff !important;
+  caret-color: #222 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #222 !important;
+}
+
+.page-search input::placeholder {
+  color: #888 !important;
+  opacity: 1 !important;
+}

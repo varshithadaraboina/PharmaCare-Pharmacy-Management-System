@@ -1,23 +1,14 @@
-
 services:
-  mongo:
-    image: mongo:7
-    container_name: pharmacare-mongo
-    restart: unless-stopped
-    volumes:
-      - mongo_data:/data/db
-
   backend:
     build: ./backend
     container_name: pharmacare-backend
     restart: unless-stopped
     ports:
       - "5000:5000"
+    env_file:
+      - ./backend/.env
     environment:
-      PORT: 5000
-      MONGO_URI: mongodb://mongo:27017/pharmacare
-    depends_on:
-      - mongo
+      PORT: "5000"
 
   frontend:
     build: .
@@ -27,6 +18,3 @@ services:
       - "5173:80"
     depends_on:
       - backend
-
-volumes:
-  mongo_data:

@@ -7,8 +7,9 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
-
+const API = import.meta.env.PROD
+  ? "https://pharmacare-backend-nv4l.onrender.com/api"
+  : "http://localhost:5000/api";
 const SAMPLE_MEDICINES = [
   { name: "Paracetamol 500mg", category: "Pain Relief", stock: 120, price: 20, expiry: "2027-12-31" },
   { name: "Amoxicillin 250mg", category: "Antibiotic", stock: 65, price: 45, expiry: "2027-08-20" },
@@ -1350,10 +1351,17 @@ function reportsPage() {
         <div className="page-search">
           <Search size={16}/>
           <input
-            placeholder="Search medicine name, category or ID..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
+  placeholder="Search medicine name, category or ID..."
+  value={search}
+  onChange={e => setSearch(e.target.value)}
+  style={{
+    color: "#222222",
+    backgroundColor: "#ffffff",
+    WebkitTextFillColor: "#222222",
+    caretColor: "#222222",
+    opacity: 1
+  }}
+/>
         </div>
 
         {renderMedicineTable()}
@@ -1470,10 +1478,17 @@ function reportsPage() {
             <div className="header-search">
               <Search size={16}/>
               <input
-                placeholder="Search medicines..."
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-              />
+  placeholder="Search medicines..."
+  value={search}
+  onChange={e => setSearch(e.target.value)}
+  style={{
+    color: "#222222",
+    backgroundColor: "transparent",
+    WebkitTextFillColor: "#222222",
+    caretColor: "#222222",
+    opacity: 1
+  }}
+/>
             </div>
 
             <button className="notification" onClick={() => navigate("Inventory")}>
